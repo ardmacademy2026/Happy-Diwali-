@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy Diwali from ARDM Academy</title>
+<meta name="description" content="ARDM Academy wishes every student, teacher and faculty member a very Happy Diwali. Light a diya, watch ten kinds of fireworks and send your own wish.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07030f;--pur:#2a0f4d;--gold:#f6c453;--gold2:#fff1b0;--gold3:#b8821f;--org:#ff7a1a;--ink:#f6ecd6;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*:before,*:after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:500 1.2rem/1.65 "Cormorant Garamond",Georgia,serif;overflow-x:hidden}
+#fx{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+main{position:relative;z-index:1}
+section{min-height:100vh;padding:12vh 6vw;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative}
+h1,h2,h3,.cin{font-family:Cinzel,"Times New Roman",serif;margin:0}
+.gold{background:linear-gradient(100deg,var(--gold3) 10%,var(--gold2) 40%,var(--gold) 55%,var(--gold3) 90%);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 6s linear infinite;filter:drop-shadow(0 3px 0 #6b4308) drop-shadow(0 8px 18px rgba(255,140,20,.45))}
+@keyframes shine{to{background-position:-220% 0}}
+h1{font-size:clamp(2.6rem,10vw,8rem);font-weight:800;line-height:1;letter-spacing:.04em;transform:perspective(700px) rotateX(calc(var(--ry,0)*1deg)) rotateY(calc(var(--rx,0)*1deg))}
+h2{font-size:clamp(1.7rem,5vw,3.4rem);font-weight:800;max-width:18ch;line-height:1.15}
+.glass{background:rgba(42,15,77,.38);border:1px solid rgba(246,196,83,.28);border-radius:22px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 20px 60px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,241,176,.18)}
+.logo{display:inline-flex;align-items:center;gap:.8rem;margin-bottom:1.6rem}
+.logo b{font:800 1.3rem Cinzel,serif;letter-spacing:.3em;padding:.5rem 1rem .5rem 1.3rem;border:2px solid var(--gold);border-radius:6px;transform:perspective(400px) rotateX(14deg);text-shadow:0 2px 0 #6b4308,0 0 18px rgba(255,170,40,.7);color:var(--gold2);box-shadow:0 6px 0 #6b4308,0 0 30px rgba(246,196,83,.35)}
+.tag{letter-spacing:.35em;font-size:.8rem;color:var(--gold);margin-top:.6rem}
+.sub{max-width:36rem;margin:1.2rem auto .4rem;font-size:1.5rem}
+.sp{color:var(--gold2);font-style:italic}
+.btn{margin-top:1.8rem;font:800 .95rem Cinzel,serif;letter-spacing:.16em;color:#2a1200;background:linear-gradient(180deg,var(--gold2),var(--gold) 55%,var(--gold3));border:0;border-radius:999px;padding:1.05rem 2.2rem;cursor:pointer;box-shadow:0 5px 0 #6b4308,0 0 34px rgba(255,150,30,.55);animation:pulse 2.4s ease-in-out infinite;transition:transform .15s}
+.btn:active{transform:translateY(4px);box-shadow:0 1px 0 #6b4308}
+.btn:focus-visible,select:focus-visible,input:focus-visible,.dy:focus-visible,.fw:focus-visible{outline:3px solid var(--gold2);outline-offset:3px}
+@keyframes pulse{50%{box-shadow:0 5px 0 #6b4308,0 0 56px rgba(255,150,30,.9)}}
+/* hero diya */
+#hero{background:radial-gradient(circle at var(--mx,50%) var(--my,62%),rgba(255,140,30,.22),transparent 45%)}
+.hd{width:150px;margin:1.4rem auto 0;perspective:500px}
+.hd svg{width:100%;transform:rotateX(calc(var(--ry,0)*1deg)) rotateY(calc(var(--rx,0)*1deg));transition:transform .15s}
+.palace{position:absolute;bottom:0;left:0;right:0;height:22vh;opacity:.5;pointer-events:none}
+.flame{position:absolute;width:26px;height:50px;left:50%;margin-left:-13px;bottom:62%;border-radius:50% 50% 50% 50%/62% 62% 38% 38%;background:radial-gradient(ellipse at 50% 80%,#fff8d0 0 22%,#ffd35a 45%,#ff7a1a 80%,transparent);filter:blur(.6px) drop-shadow(0 0 14px #ff9a2a);transform-origin:50% 100%;animation:fl .5s ease-in-out infinite alternate;transition:transform .3s,filter .3s}
+@keyframes fl{0%{transform:scale(1,1) rotate(-3deg)}100%{transform:scale(.92,1.12) rotate(3deg)}}
+/* fireworks lab */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.9rem;width:min(100%,64rem);margin-top:2rem}
+.fw{font:inherit;color:var(--ink);text-align:left;padding:1rem 1.1rem;cursor:pointer;transition:transform .2s,border-color .2s}
+.fw:hover{transform:translateY(-4px) rotateX(6deg);border-color:var(--gold)}
+.fw i{display:block;font:normal 800 .95rem Cinzel,serif;color:var(--gold)}
+.fw span{font-size:1rem;line-height:1.3;display:block;margin-top:.2rem}
+/* message */
+.msg{max-width:42rem;padding:2.2rem clamp(1.2rem,4vw,3rem);margin-top:2rem;font-size:1.3rem}
+.msg p{margin:0 0 1.1rem}
+.sig{font:800 1.05rem Cinzel,serif;color:var(--gold)}
+/* diyas */
+.row{display:flex;flex-wrap:wrap;justify-content:center;gap:1.2rem;margin-top:2rem}
+.dy{position:relative;width:128px;height:130px;background:none;border:0;cursor:pointer;border-radius:16px;padding:0}
+.dy svg{position:absolute;inset:auto 0 0 0;width:100%}
+.dy .flame{bottom:46px;transform:scale(.8)}
+.dy.on .flame{transform:scale(1.5);filter:blur(.6px) drop-shadow(0 0 34px #ffb43a) drop-shadow(0 0 60px #ff7a1a)}
+.rg{width:min(80vw,320px);margin-top:2rem;animation:spin 60s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.lit{color:var(--gold);letter-spacing:.2em;font:800 .9rem Cinzel,serif;margin-top:1rem}
+/* wish */
+form{display:grid;gap:1rem;width:min(100%,30rem);padding:2rem;margin-top:2rem;text-align:left}
+label{font:800 .8rem Cinzel,serif;letter-spacing:.15em;color:var(--gold)}
+input,select{width:100%;font:inherit;font-size:1.2rem;color:var(--ink);background:rgba(7,3,15,.7);border:1px solid rgba(246,196,83,.4);border-radius:12px;padding:.8rem 1rem;margin-top:.3rem}
+#card{display:none;margin-top:2rem;padding:2rem;max-width:38rem;white-space:pre-line;font-size:1.3rem;animation:pop .8s cubic-bezier(.2,1.4,.4,1)}
+#card h3{font-size:clamp(1.5rem,5vw,2.4rem);margin-bottom:.8rem}
+@keyframes pop{from{opacity:0;transform:scale(.7) rotateX(50deg)}}
+/* final */
+.big{font-size:clamp(2.4rem,12vw,9rem)}
+footer{margin-top:3rem;font-size:1rem;color:#cdb98a}
+footer b{display:block;font:800 .85rem Cinzel,serif;letter-spacing:.25em;color:var(--gold);margin:.3rem 0}
+.brand{animation:glow 3s ease-in-out infinite alternate}
+@keyframes glow{to{filter:drop-shadow(0 0 22px rgba(255,160,40,.9))}}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,120px);background:var(--gold);color:#2a1200;font:800 .85rem Cinzel,serif;padding:.7rem 1.4rem;border-radius:99px;z-index:9;transition:transform .35s}
+.toast.show{transform:translate(-50%,0)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<canvas id="fx" aria-hidden="true"></canvas>
+<main>
+
+<section id="hero">
+  <div class="logo"><b>ARDM</b><span class="cin gold" style="font-size:1.2rem;letter-spacing:.3em">ACADEMY</span></div>
+  <h1 class="gold">HAPPY DIWALI</h1>
+  <div class="hd" aria-hidden="true">
+    <div style="position:relative">
+      <div class="flame" style="bottom:58%;width:34px;height:64px;margin-left:-17px"></div>
+      <svg viewBox="0 0 150 90"><defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff1b0"/><stop offset=".5" stop-color="#f6c453"/><stop offset="1" stop-color="#8a5a10"/></linearGradient></defs><path d="M6 32h138c0 34-28 56-69 56S6 66 6 32z" fill="url(#g)"/><ellipse cx="75" cy="32" rx="69" ry="9" fill="#5a3206"/><path d="M30 52q45 14 90 0" stroke="#7a4a0c" stroke-width="3" fill="none"/><circle cx="75" cy="70" r="5" fill="#c0392b"/></svg>
+    </div>
+  </div>
+  <p class="sub">Celebrating the Festival of Lights, Knowledge, Happiness &amp; New Beginnings.</p>
+  <p class="sp">To All Our Beloved Students, Respected Teachers &amp; Faculty Members.</p>
+  <button class="btn" id="go">EXPLORE THE CELEBRATION</button>
+  <div class="tag">LEARN • GROW • SUCCEED • INSPIRE</div>
+  <svg class="palace" viewBox="0 0 800 120" preserveAspectRatio="none" fill="#12061f"><path d="M0 120V80h40V60q10-30 20 0v20h60V50q20-50 40 0v30h40V70h30V30q15-40 30 0v40h20V60q20-40 40 0v20h60V20q25-60 50 0v60h30V70h40V50q20-45 40 0v30h50V60q10-30 20 0v20h50V45q20-45 40 0v35h70v40z"/></svg>
+</section>
+
+<section id="lab">
+  <h2 class="gold">Ten Fireworks, One Sky</h2>
+  <p class="sub">Tap any firework to launch it. Every one has its own colour, trail and burst.</p>
+  <div class="grid" id="grid"></div>
+  <button class="btn" id="all">LAUNCH THEM ALL</button>
+</section>
+
+<section id="msg">
+  <h2 class="gold">A Festival of Lights, A Celebration of Knowledge!</h2>
+  <div class="glass msg">
+    <p>On this beautiful occasion of Diwali, ARDM Academy extends its warmest wishes to all our beloved students, respected teachers, and dedicated faculty members.</p>
+    <p>May this festival illuminate your lives with happiness, your minds with knowledge, your hearts with positivity, and your future with endless opportunities.</p>
+    <p>May every diya represent a new dream, every sparkle represent a new achievement, and every celebration bring us closer to success.</p>
+    <p>Thank you for being an important part of the ARDM Academy family.</p>
+    <p class="sig">With Love &amp; Warm Wishes,<br>TEAM ARDM ACADEMY</p>
+  </div>
+</section>
+
+<section id="diyas">
+  <h2 class="gold">Light a Diya, Spread Happiness!</h2>
+  <p class="sub">Tap a diya to make its flame blaze. Light all five for a surprise.</p>
+  <div class="row" id="row"></div>
+  <div class="lit" id="lit">0 OF 5 LIT</div>
+  <svg class="rg" id="rg" viewBox="-100 -100 200 200" aria-hidden="true"></svg>
+</section>
+
+<section id="wish">
+  <h2 class="gold">Send Your Diwali Wishes!</h2>
+  <form class="glass" id="f">
+    <div><label for="n">YOUR NAME</label><input id="n" maxlength="40" required placeholder="Type your name" autocomplete="given-name"></div>
+    <div><label for="r">YOU ARE A</label><select id="r"><option>Student</option><option>Teacher</option><option>Faculty</option><option>Guest</option></select></div>
+    <button class="btn" type="submit" style="margin:0">CREATE MY GREETING</button>
+  </form>
+  <div class="glass" id="card"><h3 class="gold" id="ct"></h3><div id="cb"></div><button class="btn" id="cp" style="font-size:.8rem;padding:.8rem 1.6rem">COPY GREETING</button></div>
+</section>
+
+<section id="end">
+  <div class="logo brand"><b>ARDM</b><span class="cin gold" style="font-size:1.2rem;letter-spacing:.3em">ACADEMY</span></div>
+  <h1 class="gold big">HAPPY DIWALI 2026</h1>
+  <p class="sub">May Your Life Always Shine With Happiness, Knowledge &amp; Success.</p>
+  <button class="btn" id="fin">FIRE THE GRAND FINALE</button>
+  <footer>© 2026 ARDM ACADEMY<b>LEARN • GROW • SUCCEED • INSPIRE</b>Designed with Love for Our Students &amp; Teachers.</footer>
+</section>
+</main>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+const $=s=>document.querySelector(s),R=Math.random,RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const cv=$('#fx'),c=cv.getContext('2d'),D=Math.min(devicePixelRatio||1,1.5);
+let W,H,fl=0,stars=[];
+function rs(){W=innerWidth;H=innerHeight;cv.width=W*D;cv.height=H*D;c.setTransform(D,0,0,D,0,0);stars=Array.from({length:W<600?110:220},()=>({x:R()*W,y:R()*H*.9,s:R()*1.4+.3,p:R()*6}))}
+addEventListener('resize',rs);rs();
+const P=[],E=[],hsl=(h,l=60)=>`hsl(${h},100%,${l}%)`,GOLD=hsl(43),MAX=W<600?900:1800;
+function sp(x,y,vx,vy,col,life,o={}){if(P.length<MAX)P.push({x,y,z:o.z||0,vx,vy,vz:o.vz||0,l:life,m:life,col,s:o.s||2,g:o.g??.05,d:o.d||.985})}
+function burst(x,y,col,n,v,o={}){fl=Math.min(fl+.12,.3);for(let i=0;i<n;i++){const u=R()*2-1,t=R()*6.283,r=Math.sqrt(1-u*u),k=v*(o.ring?1:.55+R()*.45);
+ const a=o.ring?[Math.cos(t)*k,Math.sin(t)*k*.4,Math.sin(t)*k]:[r*Math.cos(t)*k,u*k,r*Math.sin(t)*k];
+ sp(x,y,a[0],a[1],typeof col=='function'?col():col,o.life||70+R()*30,{vz:a[2],g:o.g,d:o.d,s:o.s})}}
+function rise(x,ty,col,done,len=26){E.push({y:H+8,step(){this.y-=H/48;sp(x+(R()-.5)*2,this.y,(R()-.5)*.6,1.5,col,len,{s:1.8,g:.02});if(this.y<=ty){done(x,this.y);return 0}return 1}})}
+const rx=()=>W*(.15+R()*.7),gy=()=>H-24;
+function emit(dur,fn){E.push({t:0,step(){fn(this.t++);return this.t<dur}})}
+const FW=[
+['Sky Rocket','Streaks up, bursts gold',()=>{const x=rx();rise(x,H*.25,GOLD,(a,b)=>{burst(a,b,GOLD,60,4.2);burst(a,b,hsl(25),30,2.4)})}],
+['Aerial Shell','Massive golden bloom',()=>{const x=rx(),y=H*.28;rise(x,y,'#fff',(a,b)=>{burst(a,b,()=>hsl(38+R()*14,62),240,7.5,{g:.04,life:95});burst(a,b,'#fff6c8',60,3,{ring:1})},34)}],
+['Flower Pot','Fountain of golden sparks',()=>{const x=rx(),y=gy();emit(130,()=>{for(let i=0;i<4;i++)sp(x,y,(R()-.5)*1.8,-(6+R()*4),GOLD,55,{s:1.7,g:.13})})}],
+['Chakri','Spinning wheel of fire',()=>{const x=rx(),y=H*.6;emit(170,t=>{const a=t*.4;for(let i=0;i<3;i++){const b=a+i*2.09;sp(x+Math.cos(b)*34,y+Math.sin(b)*34,-Math.sin(b)*3+Math.cos(b),Math.cos(b)*3+Math.sin(b),hsl(22+R()*20),32,{s:1.8,g:.03,vz:Math.sin(b)*2})}})}],
+['Anar','Classic sparkling fountain',()=>{const x=rx(),y=gy();emit(110,()=>{for(let i=0;i<6;i++)sp(x,y,(R()-.5)*3.5,-(5+R()*6),hsl(30+R()*35,70),48,{s:1.6,g:.14})})}],
+['Sparklers','Hand-held glitter',()=>{const x=rx(),y=H*.62;emit(170,()=>{for(let j=-1;j<2;j++)for(let i=0;i<3;i++){const a=R()*6.28,v=1+R()*2.4;sp(x+j*46,y,Math.cos(a)*v,Math.sin(a)*v,R()<.5?'#fff6c8':GOLD,18,{s:1.2,g:.03,vz:(R()-.5)*3})}})}],
+['Colourful Comets','Five tails, five colours',()=>{for(let i=0;i<5;i++)setTimeout(()=>{const h=i*70+R()*20,x=W*(.12+i*.19);rise(x,H*(.22+R()*.2),hsl(h),(a,b)=>burst(a,b,hsl(h),55,4.2,{ring:i%2}),44)},i*180)}],
+['Ground Spinner','Whirling disc of colour',()=>{const x=rx(),y=gy()-10;emit(150,t=>{const a=t*.55;for(let i=0;i<3;i++){const b=a+i*2.09;sp(x,y,Math.cos(b)*4.5,-.8+Math.sin(b)*.4,hsl((t*8+i*60)%360),30,{s:1.8,g:.05,vz:Math.sin(b)*4.5})}})}],
+['Multi-shot Barrage','Eight shells, one volley',()=>{for(let i=0;i<8;i++)setTimeout(()=>{const h=R()*360;rise(W*(.08+i*.12),H*(.15+R()*.3),hsl(h),(a,b)=>burst(a,b,hsl(h),90,5.4,{life:80}))},i*140)}],
+['Crackers','Bang, flash and shimmer',()=>{const x=rx();let n=0;const id=setInterval(()=>{const a=x+(R()-.5)*160,b=gy()-R()*40;fl=.28;burst(a,b,'#fff2b8',26,4.2,{life:24,s:2.4,g:.08});burst(a,b,hsl(20),14,2.2,{ring:1,life:30});if(++n>11)clearInterval(id)},170)}]];
+const grid=$('#grid');FW.forEach((f,i)=>{const b=document.createElement('button');b.className='fw glass';b.innerHTML=`<i>${f[0]}</i><span>${f[1]}</span>`;b.onclick=()=>f[2]();grid.appendChild(b)});
+const rnd=()=>FW[Math.floor(R()*FW.length)][2]();
+const all=()=>FW.forEach((f,i)=>setTimeout(f[2],i*260));
+const barrage=()=>FW[8][2]();
+function loop(){
+ c.globalCompositeOperation='source-over';c.fillStyle='rgba(7,3,15,.26)';c.fillRect(0,0,W,H);
+ const g=c.createLinearGradient(0,0,0,H);g.addColorStop(0,'rgba(42,15,77,.0)');g.addColorStop(1,'rgba(90,30,10,.10)');c.fillStyle=g;c.fillRect(0,0,W,H);
+ const t=performance.now()/700;c.fillStyle='#fff';
+ for(const s of stars){c.globalAlpha=.35+.5*Math.abs(Math.sin(t+s.p));c.fillRect(s.x,s.y,s.s,s.s)}
+ c.globalAlpha=1;
+ for(let i=E.length;i--;)if(!E[i].step())E.splice(i,1);
+ c.globalCompositeOperation='lighter';
+ for(let i=P.length;i--;){const p=P[i];p.vx*=p.d;p.vy=p.vy*p.d+p.g;p.vz*=p.d;p.x+=p.vx;p.y+=p.vy;p.z+=p.vz;
+  if(--p.l<=0){P.splice(i,1);continue}
+  const k=520/(520+p.z),px=W/2+(p.x-W/2)*k,py=H/2+(p.y-H/2)*k,a=p.l/p.m;
+  c.globalAlpha=Math.min(1,a*1.4);c.fillStyle=p.col;const s=p.s*k*(.5+a*.7);c.fillRect(px-s/2,py-s/2,s,s)}
+ c.globalAlpha=1;
+ if(fl>.01){c.fillStyle=`rgba(255,190,100,${fl})`;c.fillRect(0,0,W,H);fl*=.86}
+ if(!document.hidden)requestAnimationFrame(loop)}
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)loop()});
+loop();
+let amb=setInterval(()=>{if(!document.hidden&&!RM&&E.length<4)rnd()},2400);
+setTimeout(()=>{FW[1][2]();setTimeout(FW[0][2],500)},400);
+
+/* hero tilt + light */
+addEventListener('pointermove',e=>{const x=e.clientX/W,y=e.clientY/H,h=$('#hero').style;h.setProperty('--mx',x*100+'%');h.setProperty('--my',y*100+'%');
+ document.documentElement.style.setProperty('--rx',((x-.5)*16).toFixed(1));document.documentElement.style.setProperty('--ry',((.5-y)*10).toFixed(1))});
+$('#go').onclick=()=>{$('#lab').scrollIntoView({behavior:'smooth'});all()};
+$('#all').onclick=all;$('#fin').onclick=()=>{all();setTimeout(all,1800);setTimeout(()=>burst(W/2,H*.4,()=>hsl(35+R()*15,62),400,9,{life:110}),900)};
+
+/* diyas */
+const row=$('#row');let lit=new Set();
+const bowl='<svg viewBox="0 0 150 70"><path d="M6 14h138c0 30-28 50-69 50S6 44 6 14z" fill="url(#g)"/><ellipse cx="75" cy="14" rx="69" ry="9" fill="#5a3206"/><path d="M30 34q45 14 90 0" stroke="#7a4a0c" stroke-width="3" fill="none"/><circle cx="75" cy="50" r="4" fill="hsl(HUE,80%,55%)"/></svg>';
+[350,20,43,280,160].forEach((h,i)=>{const b=document.createElement('button');b.className='dy';b.setAttribute('aria-label','Light diya '+(i+1));b.setAttribute('aria-pressed','false');
+ b.innerHTML='<div class="flame"></div>'+bowl.replace('HUE',h);
+ b.onclick=()=>{const r=b.getBoundingClientRect(),x=r.left+r.width/2,y=r.top+30;b.classList.add('on');b.setAttribute('aria-pressed','true');
+  for(let k=0;k<70;k++){const a=R()*6.28,v=1+R()*4;sp(x,y,Math.cos(a)*v,Math.sin(a)*v-2,R()<.6?GOLD:'#fff1b0',60,{s:2,g:.04,vz:(R()-.5)*4})}
+  lit.add(i);$('#lit').textContent=lit.size+' OF 5 LIT';
+  if(lit.size==5){lit.clear();toast('Five diyas lit. Happy Diwali!');all()}
+  setTimeout(()=>{b.classList.remove('on');b.setAttribute('aria-pressed','false')},5000)};row.appendChild(b)});
+/* rangoli */
+let s='';[[88,12,43,.9],[70,16,330,.8],[52,10,22,.85],[34,8,270,.9],[18,6,43,1]].forEach(([r,n,h,o],j)=>{for(let i=0;i<n;i++){const a=360/n*i+(j%2)*10;s+=`<ellipse cx="0" cy="${-r}" rx="${r/6+3}" ry="${r/3.2+4}" fill="hsl(${h},90%,${55+j*3}%)" opacity="${o}" stroke="#fff1b0" stroke-width=".6" transform="rotate(${a})"/>`}});
+s+='<circle r="6" fill="#fff1b0"/>';$('#rg').innerHTML=s;
+/* petals */
+for(let i=0;i<14&&!RM;i++)setInterval(()=>{if(document.hidden)return;sp(R()*W,-10,(R()-.3)*.6,.6+R(),R()<.5?hsl(25):hsl(335,65),420,{s:5,g:0,d:1,vz:(R()-.5)})},3000+R()*3000);
+
+/* wishes */
+const lines={Student:'May your studies shine brighter than a thousand diyas and every effort bring you closer to your dreams.',Teacher:'Thank you for lighting the lamp of knowledge in so many lives. May your own life glow with joy and peace.',Faculty:'Thank you for the dedication that keeps our Academy shining. May the year ahead bring you happiness and prosperity.',Guest:'May your life shine brighter than a thousand diyas. We are glad you are part of our celebration.'};
+let txt='';
+$('#f').onsubmit=e=>{e.preventDefault();const n=$('#n').value.trim(),r=$('#r').value;if(!n)return;
+ $('#ct').textContent='Happy Diwali, '+n+'!';
+ const body=lines[r]+'\nWishing you happiness, success, prosperity and endless opportunities.\n\nWith Love, ARDM Academy.';$('#cb').textContent=body;txt='Happy Diwali, '+n+'!\n\n'+body;
+ $('#card').style.display='block';$('#card').scrollIntoView({behavior:'smooth',block:'center'});const b=$('#card').getBoundingClientRect();
+ setTimeout(()=>{burst(W/2,H*.35,()=>hsl(38+R()*14,62),160,6,{life:90});FW[1][2]()},400)};
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove('show'),2400)}
+$('#cp').onclick=async()=>{try{await navigator.clipboard.writeText(txt);toast('Greeting copied')}catch(_){const a=document.createElement('textarea');a.value=txt;document.body.appendChild(a);a.select();try{document.execCommand('copy');toast('Greeting copied')}catch(__){toast('Select the text to copy it')}a.remove()}};
+/* finale on arrival */
+new IntersectionObserver(([e])=>{if(e.isIntersecting&&!RM){all();setTimeout(()=>burst(W/2,H*.35,()=>hsl(35+R()*15,62),350,9,{life:110}),1200)}},{threshold:.6}).observe($('#end'));
+</script>
+</body>
+</html>
